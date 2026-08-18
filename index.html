@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="css/style.css" />
 
     <style>
+      /* ===== Toast / Snackbar for form submission feedback ===== */
       #form-toast {
         position: fixed;
         left: 50%;
@@ -58,6 +59,130 @@
       #submit[disabled] {
         opacity: 0.7;
         cursor: not-allowed;
+      }
+
+      /* ===== Project cover placeholders (replace with real screenshots when ready) ===== */
+      .project-cover {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        height: 220px;
+        border-radius: 8px;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .project-cover .project-icon {
+        width: 54px;
+        height: 54px;
+        stroke-width: 1.6;
+      }
+
+      .project-cover .project-name {
+        font-size: 18px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+      }
+
+      .proj-1 {
+        background: linear-gradient(135deg, #1f5f8b, #1b998b);
+      }
+
+      .proj-2 {
+        background: linear-gradient(135deg, #6a4c93, #8367c7);
+      }
+
+      .proj-3 {
+        background: linear-gradient(135deg, #d1495b, #f77f00);
+      }
+
+      .proj-4 {
+        background: linear-gradient(135deg, #22577a, #38a3a5);
+      }
+
+      .proj-5 {
+        background: linear-gradient(135deg, #e07a5f, #f2cc8f);
+      }
+
+      .proj-6 {
+        background: linear-gradient(135deg, #3d5a80, #98c1d9);
+      }
+
+      .proj-7 {
+        background: linear-gradient(135deg, #457b9d, #1d3557);
+      }
+
+      /* ===== Portfolio card & modal typography (consistent sizing) ===== */
+
+      .project-logo {
+        width: 120px;
+        height: 120px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 5px;
+        border-radius: 20px;
+      }
+
+      .main-project-logo {
+        width: 180px;
+        height: 180px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto 15px;
+        border-radius: 20px;
+      }
+
+      .project-cover .project-name {
+        font-size: 18px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      .rn-portfolio .content .title {
+        font-size: 20px;
+        font-weight: 600;
+        line-height: 1.4;
+        margin-bottom: 8px;
+      }
+
+      .rn-portfolio .content .description {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 1.6;
+        color: #6b7280;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        margin-bottom: 0;
+      }
+
+      .modal .text-content h3 {
+        font-size: 22px;
+        font-weight: 600;
+        line-height: 1.35;
+        margin-bottom: 14px;
+      }
+
+      .modal .text-content h3 span {
+        display: block;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: #f9004d;
+        margin-bottom: 4px;
+      }
+
+      .modal .text-content p.mb--30 {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 1.75;
+        color: #6b7280;
       }
     </style>
   </head>
@@ -651,6 +776,7 @@
           </div>
 
           <div class="row row--25 mt--10 mt_md--10 mt_sm--10">
+            <!-- Policy Vault -->
             <div
               data-aos="fade-up"
               data-aos-delay="100"
@@ -660,33 +786,68 @@
               <div
                 class="rn-portfolio"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter"
+                data-bs-target="#modal-policy-vault"
               >
                 <div class="inner">
-                  <div class="thumbnail">
+                  <div class="thumbnail project-cover proj-1">
                     <img
-                      src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-01.jpg"
-                      alt="Portfolio project"
+                      src="img/policy-vault.png"
+                      alt="Policy Vault Logo"
+                      class="project-logo"
                     />
+                    <!-- <i data-feather="shield" class="project-icon"></i> -->
+                    <span class="project-name">Policy Vault</span>
                   </div>
                   <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Development</a>
-                      </div>
-                      <div class="meta">
-                        <span><i class="feather-heart"></i> 600</span>
-                      </div>
-                    </div>
                     <h4 class="title">
-                      The services provide for design
-                      <i class="feather-arrow-up-right"></i>
+                      Policy Vault <i class="feather-arrow-up-right"></i>
                     </h4>
+                    <p class="description">
+                      Secure policy management, onboarding & family sharing for
+                      insurance users, with an OCR Smart Document Scanner that
+                      auto-fills forms.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Mega Flooring -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-once="true"
+              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30"
+            >
+              <div
+                class="rn-portfolio"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-mega-flooring"
+              >
+                <div class="inner">
+                  <div class="thumbnail project-cover proj-2">
+                    <img
+                      src="img/mega-flooring.png"
+                      alt="Policy Vault Logo"
+                      class="project-logo"
+                    />
+                    <span class="project-name">Mega Flooring</span>
+                  </div>
+                  <div class="content">
+                    <h4 class="title">
+                      Mega Flooring <i class="feather-arrow-up-right"></i>
+                    </h4>
+                    <p class="description">
+                      UK flooring e-commerce app (rugs, vinyl, LVT, laminate,
+                      carpets) with a project-builder tool for fitters to share
+                      product lists.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- OneVasco -->
             <div
               data-aos="fade-up"
               data-aos-delay="300"
@@ -696,69 +857,32 @@
               <div
                 class="rn-portfolio"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter"
+                data-bs-target="#modal-onevasco"
               >
                 <div class="inner">
-                  <div class="thumbnail">
+                  <div class="thumbnail project-cover proj-3">
                     <img
-                      src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-02.jpg"
-                      alt="Portfolio project"
+                      src="img/one-vasco.png"
+                      alt="Policy Vault Logo"
+                      class="project-logo"
                     />
+                    <span class="project-name">OneVasco</span>
                   </div>
                   <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Application</a>
-                      </div>
-                      <div class="meta">
-                        <span><i class="feather-heart"></i> 750</span>
-                      </div>
-                    </div>
                     <h4 class="title">
-                      Mobile app landing design & app maintain
-                      <i class="feather-arrow-up-right"></i>
+                      OneVasco <i class="feather-arrow-up-right"></i>
                     </h4>
+                    <p class="description">
+                      Paid visa assistance app with form-filling support,
+                      document verification, secure payments, and real-time
+                      application tracking.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div
-              data-aos="fade-up"
-              data-aos-delay="500"
-              data-aos-once="true"
-              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30"
-            >
-              <div
-                class="rn-portfolio"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter"
-              >
-                <div class="inner">
-                  <div class="thumbnail">
-                    <img
-                      src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-03.jpg"
-                      alt="Portfolio project"
-                    />
-                  </div>
-                  <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Photoshop</a>
-                      </div>
-                      <div class="meta">
-                        <span><i class="feather-heart"></i> 630</span>
-                      </div>
-                    </div>
-                    <h4 class="title">
-                      Logo design creativity & Application
-                      <i class="feather-arrow-up-right"></i>
-                    </h4>
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            <!-- Mechmiles -->
             <div
               data-aos="fade-up"
               data-aos-delay="100"
@@ -768,33 +892,67 @@
               <div
                 class="rn-portfolio"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter"
+                data-bs-target="#modal-mechmiles"
               >
                 <div class="inner">
-                  <div class="thumbnail">
+                  <div class="thumbnail project-cover proj-4">
                     <img
-                      src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-04.jpg"
-                      alt="Portfolio project"
+                      src="img/mechmiles.png"
+                      alt="Policy Vault Logo"
+                      class="project-logo"
                     />
+                    <span class="project-name">Mechmiles</span>
                   </div>
                   <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Figma</a>
-                      </div>
-                      <div class="meta">
-                        <span><i class="feather-heart"></i> 360</span>
-                      </div>
-                    </div>
                     <h4 class="title">
-                      Mobile app landing design & Services
-                      <i class="feather-arrow-up-right"></i>
+                      Mechmiles <i class="feather-arrow-up-right"></i>
                     </h4>
+                    <p class="description">
+                      Pan-India highway service network for vehicle servicing,
+                      tyre/battery replacement, and SOS roadside assistance for
+                      all vehicle types.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- CloseToBuy -->
+            <div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              data-aos-once="true"
+              class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30"
+            >
+              <div
+                class="rn-portfolio"
+                data-bs-toggle="modal"
+                data-bs-target="#modal-closetobuy"
+              >
+                <div class="inner">
+                  <div class="thumbnail project-cover proj-5">
+                    <img
+                      src="img/close-to-buy.png"
+                      alt="Policy Vault Logo"
+                      class="project-logo"
+                    />
+                    <span class="project-name">CloseToBuy</span>
+                  </div>
+                  <div class="content">
+                    <h4 class="title">
+                      CloseToBuy <i class="feather-arrow-up-right"></i>
+                    </h4>
+                    <p class="description">
+                      Food delivery & dining app for discovering restaurants and
+                      ordering, with integrated payments and push notifications
+                      for order updates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- SGTBPS Teacher -->
             <div
               data-aos="fade-up"
               data-aos-delay="300"
@@ -804,64 +962,129 @@
               <div
                 class="rn-portfolio"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter"
+                data-bs-target="#modal-sgtbps"
               >
                 <div class="inner">
-                  <div class="thumbnail">
+                  <div class="thumbnail project-cover proj-6">
                     <img
-                      src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-05.jpg"
-                      alt="Portfolio project"
+                      src="img/sgtbps-teacher.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="project-logo"
                     />
+                    <span class="project-name">SGTBPS Teacher</span>
                   </div>
                   <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Web Design</a>
-                      </div>
-                      <div class="meta">
-                        <span><i class="feather-heart"></i> 280</span>
-                      </div>
-                    </div>
                     <h4 class="title">
-                      Design for technology & services
-                      <i class="feather-arrow-up-right"></i>
+                      SGTBPS Teacher <i class="feather-arrow-up-right"></i>
                     </h4>
+                    <p class="description">
+                      Native Android app (Java & Retrofit) for teachers to
+                      manage classes, track attendance, and get real-time
+                      updates.
+                    </p>
                   </div>
                 </div>
               </div>
             </div>
 
-            <div
+            <!-- VKSSVNIC School -->
+            <!-- <div
               data-aos="fade-up"
-              data-aos-delay="500"
+              data-aos-delay="100"
               data-aos-once="true"
               class="col-lg-6 col-xl-4 col-md-6 col-12 mt--50 mt_md--30 mt_sm--30"
             >
               <div
                 class="rn-portfolio"
                 data-bs-toggle="modal"
-                data-bs-target="#exampleModalCenter"
+                data-bs-target="#modal-vkssvnic"
               >
                 <div class="inner">
-                  <div class="thumbnail">
-                    <img
-                      src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-06.jpg"
-                      alt="Portfolio project"
-                    />
+                  <div class="thumbnail project-cover proj-7">
+                    <i data-feather="users" class="project-icon"></i>
+                    <span class="project-name">VKSSVNIC School</span>
                   </div>
                   <div class="content">
-                    <div class="category-info">
-                      <div class="category-list">
-                        <a href="javascript:void(0)">Web Design</a>
-                      </div>
-                      <div class="meta">
-                        <span><i class="feather-heart"></i> 690</span>
-                      </div>
-                    </div>
                     <h4 class="title">
-                      App for technology & services
-                      <i class="feather-arrow-up-right"></i>
+                      VKSSVNIC School <i class="feather-arrow-up-right"></i>
                     </h4>
+                    <p class="description">
+                      School management app for students, teachers & parents
+                      covering attendance, fee tracking, and exam schedules.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <!-- End Portfolio Area -->
+
+      <!-- Start Portfolio Detail Modals -->
+      <!-- TODO: replace every href="#" below with the real Play Store / App Store link for that app -->
+
+      <div
+        class="modal fade"
+        id="modal-policy-vault"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-1"
+                    style="height: 260px"
+                  >
+                    <img
+                      src="img/policy-vault.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="main-project-logo"
+                    />
+                    <span class="project-name">Policy Vault</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>Insurance &middot; Flutter</span> Policy Vault
+                    </h3>
+                    <p class="mb--30">
+                      Policy Vault is an insurance-focused Flutter app built for
+                      secure policy management, smooth user onboarding, and
+                      family sharing so households can track their policies
+                      together in one place. Real-time notifications keep users
+                      updated on renewals, claims, and important policy events.
+                      A standout feature is the OCR Smart Document Scanner,
+                      which automatically extracts data from uploaded identity
+                      and policy documents to auto-fill forms, cutting down
+                      manual data entry and reducing errors.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.proj.policyvault&hl=en_IN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -869,7 +1092,410 @@
           </div>
         </div>
       </div>
-      <!-- End Portfolio Area -->
+
+      <div
+        class="modal fade"
+        id="modal-mega-flooring"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-2"
+                    style="height: 260px"
+                  >
+                    <img
+                      src="img/mega-flooring.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="main-project-logo"
+                    />
+                    <span class="project-name">Mega Flooring</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>E-commerce &middot; Flutter</span> Mega Flooring
+                    </h3>
+                    <p class="mb--30">
+                      Mega Flooring is a Flutter e-commerce app built for the UK
+                      flooring market, covering categories like rugs, vinyl,
+                      LVT, laminate, carpets, and artificial grass. Customers
+                      can browse products, compare options, and place orders
+                      directly from the app. A dedicated project-builder tool
+                      lets professional fitters curate personalized product
+                      lists and share them with clients, streamlining the
+                      quoting and selection process for flooring projects.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.megaflooring.uk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-onevasco"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-3"
+                    style="height: 260px"
+                  >
+                    <img
+                      src="img/one-vasco.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="main-project-logo"
+                    />
+                    <span class="project-name">OneVasco</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>Travel & Visa Services &middot; Flutter</span>
+                      OneVasco
+                    </h3>
+                    <p class="mb--30">
+                      OneVasco is a paid visa application service built in
+                      Flutter, designed to make international travel
+                      documentation simple for global travelers. It offers
+                      professional visa assistance, guided form-filling support,
+                      and document verification to reduce errors and rejections.
+                      Users can make secure in-app payments and track their visa
+                      application status in real time, all from a single,
+                      easy-to-use interface.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.onevasco&hl=en_IN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-mechmiles"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-4"
+                    style="height: 260px"
+                  >
+                    <img
+                      src="img/mechmiles.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="main-project-logo"
+                    />
+                    <span class="project-name">Mechmiles</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>Roadside Assistance &middot; Flutter</span>
+                      Mechmiles
+                    </h3>
+                    <p class="mb--30">
+                      Mechmiles is a Flutter app built for a pan-India highway
+                      service point network, connecting travelers with nearby
+                      help whenever their vehicle needs attention. Users can
+                      book vehicle servicing, request tyre or battery
+                      replacement, and raise SOS roadside assistance requests
+                      directly from the app. It supports a wide range of vehicle
+                      types, including 2-wheelers, 3-wheelers, 4-wheelers, and
+                      commercial vehicles.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.mechcustomers.app&hl=en_IN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-closetobuy"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-5"
+                    style="height: 260px"
+                  >
+                    <img
+                      src="img/close-to-buy.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="main-project-logo"
+                    />
+                    <span class="project-name">CloseToBuy</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>Food Delivery &middot; Flutter</span> CloseToBuy
+                    </h3>
+                    <p class="mb--30">
+                      CloseToBuy is a Flutter app for food delivery and dining
+                      that helps users discover restaurants near them, browse
+                      detailed menus, and place orders in just a few taps. It
+                      comes with integrated payment gateways for smooth, secure
+                      checkout, and push notifications keep users informed at
+                      every stage of their order, from confirmation to delivery.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.close2buy.user&hl=en_IN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="modal-sgtbps"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-6"
+                    style="height: 280px"
+                  >
+                    <img
+                      src="img/sgtbps-teacher.png"
+                      alt="SGTBPS Teacher Logo"
+                      class="main-project-logo"
+                    />
+                    <span class="project-name">SGTBPS Teacher</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>Education &middot; Native Android</span> SGTBPS
+                      Teacher
+                    </h3>
+                    <p class="mb--30">
+                      SGTBPS Teacher is a native Android app built with Java and
+                      Retrofit, designed specifically for teachers to simplify
+                      their daily classroom workflow. It offers tools for class
+                      management, quick and accurate attendance tracking, and
+                      real-time updates so teachers always stay in sync with
+                      school schedules and student information.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="https://play.google.com/store/apps/details?id=com.sgtbps.teacher&hl=en_IN"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div
+        class="modal fade"
+        id="modal-vkssvnic"
+        tabindex="-1"
+        role="dialog"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button
+                type="button"
+                class="close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              >
+                <span aria-hidden="true"><i data-feather="x"></i></span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row align-items-center">
+                <div class="col-lg-6">
+                  <div
+                    class="thumbnail project-cover proj-7"
+                    style="height: 260px"
+                  >
+                    <i data-feather="users" class="project-icon"></i>
+                    <span class="project-name">VKSSVNIC School</span>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="text-content">
+                    <h3>
+                      <span>Education &middot; School Management</span> VKSSVNIC
+                      School
+                    </h3>
+                    <p class="mb--30">
+                      VKSSVNIC School is a school management app built to keep
+                      students, teachers, and parents connected on one platform.
+                      It covers daily attendance tracking, fee payment records,
+                      and exam schedules, giving parents visibility into their
+                      child's academic progress while helping teachers and
+                      school staff manage day-to-day operations more
+                      efficiently.
+                    </p>
+                    <div class="button-group mt--20">
+                      <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="rn-btn"
+                      >
+                        <span>VIEW APP</span
+                        ><i data-feather="chevron-right"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+      <!-- End Portfolio Detail Modals -->
 
       <!-- Start Resume Area -->
       <div class="rn-resume-area rn-section-gap section-separator" id="resume">
@@ -1450,6 +2076,12 @@
             <div data-aos-delay="600" class="col-lg-7 contact-input">
               <div class="contact-form-wrapper">
                 <div class="introduce">
+                  <!--
+                  Form submits via AJAX (fetch) to FormSubmit.co so the user stays on
+                  the page and sees an in-page success/error toast instead of a redirect.
+                  Note: FormSubmit sends a one-time activation link to your email the
+                  first time you deploy/submit — click it once to activate delivery.
+                -->
                   <form
                     class="rnt-contact-form rwt-dynamic-form row"
                     id="contact-form"
@@ -1549,72 +2181,6 @@
       </div>
       <!-- End Contact Section -->
 
-      <!-- Portfolio Modal -->
-      <div
-        class="modal fade"
-        id="exampleModalCenter"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button
-                type="button"
-                class="close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true"><i data-feather="x"></i></span>
-              </button>
-            </div>
-            <div class="modal-body">
-              <div class="row align-items-center">
-                <div class="col-lg-6">
-                  <div class="portfolio-popup-thumbnail">
-                    <div class="image">
-                      <img
-                        class="w-100"
-                        src="https://inbio.pixcelsthemes.com/inbio/assets/images/portfolio/portfolio-04.jpg"
-                        alt="slide"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="text-content">
-                    <h3>
-                      <span>Featured - Design</span> App Design Development.
-                    </h3>
-                    <p class="mb--30">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Cupiditate distinctio assumenda explicabo veniam
-                      temporibus eligendi.
-                    </p>
-                    <p>
-                      Consectetur adipisicing elit. Cupiditate distinctio
-                      assumenda. dolorum alias suscipit rerum maiores aliquam
-                      earum odit, nihil culpa quas iusto hic minus!
-                    </p>
-                    <div class="button-group mt--20">
-                      <a href="#" class="rn-btn thumbs-icon"
-                        ><span>LIKE THIS</span><i data-feather="thumbs-up"></i
-                      ></a>
-                      <a href="#" class="rn-btn"
-                        ><span>VIEW PROJECT</span
-                        ><i data-feather="chevron-right"></i
-                      ></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- End Portfolio Modal -->
-
       <!-- Back to top -->
       <div class="backto-top">
         <div><i data-feather="arrow-up"></i></div>
@@ -1711,3 +2277,4 @@
     </script>
   </body>
 </html>
+.
